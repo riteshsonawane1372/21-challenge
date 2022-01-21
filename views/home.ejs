@@ -1,0 +1,33 @@
+<%- include('partials/header'); -%>  <!-- partials folder contains all the footer and header ejs file -->
+
+
+
+<h1>HOME</h1>
+
+
+<p><%=homepara%></p>
+
+<% console.log(posts); %>  <!-- befoore that their was a error in ejs cannot directly access the varibale or array from app.js so we defined it go 
+and check the home roue / -->
+
+<h1><%=title%></h1> <!-- adding title enterd to the home or / route -->
+<p><%=titlecontent.substring(0,100)+"..."%><a href="/post/:"+title>Read More</a></p>        <!-- adding the title content -->
+
+
+       <% for(var i=0;i<posts.lenght;i++){%> <!-- you can use the for each here-->
+           <% console.log(posts[i].post);%>
+       <% }; %>
+
+
+
+
+
+
+   
+
+
+
+
+
+
+<%- include('partials/footer'); -%>
